@@ -5,11 +5,52 @@
 	<artifactId>hatf2-pojo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>HatF2 POJO</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+				<version>0.4.0</version>
+				<configuration>
+					<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+					<targetPackage>uk.co.solong.tf2</targetPackage>
+					<sourceType>JSONSCHEMA</sourceType>
+					<useLongIntegers>true</useLongIntegers>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+				<version>2.3.2</version>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.0.0</version>
 		</dependency>
 	</dependencies>
 </project>

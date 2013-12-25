@@ -1,0 +1,137 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"result": {
+			"type":"object",
+			"id": "http://jsonschema.net/result",
+			"required":false,
+			"properties":{
+				"items": {
+					"type":"array",
+					"id": "http://jsonschema.net/result/items",
+					"required":false,
+					"items":
+						{
+							"type":"object",
+							"id": "http://jsonschema.net/result/items/0",
+							"required":false,
+							"properties":{
+								"attributes": {
+									"type":"array",
+									"id": "http://jsonschema.net/result/items/0/attributes",
+									"required":false,
+									"items":
+										{
+											"type":"object",
+											"id": "http://jsonschema.net/result/items/0/attributes/0",
+											"required":false,
+											"properties":{
+												"defindex": {
+													"type":"number",
+													"id": "http://jsonschema.net/result/items/0/attributes/0/defindex",
+													"required":false
+												},
+												"float_value": {
+													"type":"number",
+													"id": "http://jsonschema.net/result/items/0/attributes/0/float_value",
+													"required":false
+												},
+												"value": {
+													"type":"string",
+													"id": "http://jsonschema.net/result/items/0/attributes/0/value",
+													"required":false
+												},
+												"account_info": {
+													"type":"object",
+													"id": "http://jsonschema.net/result/items/0/attributes/0/value",
+													"required":false,
+													"properties":{
+														"steamid": {
+															"type":"integer",
+															"id": "http://jsonschema.net/result/items/0/attributes/0/defindex",
+															"required":false
+														},
+														"personaname": {
+															"type":"string",
+															"id": "http://jsonschema.net/result/items/0/attributes/0/defindex",
+															"required":false
+														}
+													}
+												}
+											}
+										}
+									
+
+								},
+								"defindex": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/defindex",
+									"required":false
+								},
+								"flag_cannot_trade": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/result/items/0/flag_cannot_trade",
+									"required":false
+								},
+								"flag_cannot_craft": {
+									"type":"boolean",
+									"id": "http://jsonschema.net/result/items/0/flag_cannot_craft",
+									"required":false
+								},
+								"id": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/id",
+									"required":false
+								},
+								"inventory": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/inventory",
+									"required":false
+								},
+								"level": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/level",
+									"required":false
+								},
+								"original_id": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/original_id",
+									"required":false
+								},
+								"origin": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/origin",
+									"required":false
+								},
+								"quality": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/quality",
+									"required":false
+								},
+								"quantity": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/quantity",
+									"required":false
+								}
+							}
+						}
+					
+
+				},
+				"num_backpack_slots": {
+					"type":"integer",
+					"id": "http://jsonschema.net/result/num_backpack_slots",
+					"required":false
+				},
+				"status": {
+					"type":"integer",
+					"id": "http://jsonschema.net/result/status",
+					"required":false
+				}
+			}
+		}
+	}
+}
