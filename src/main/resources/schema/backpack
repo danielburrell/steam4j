@@ -30,7 +30,7 @@
 											"required":false,
 											"properties":{
 												"defindex": {
-													"type":"number",
+													"type":"integer",
 													"id": "http://jsonschema.net/result/items/0/attributes/0/defindex",
 													"required":false
 												},
@@ -81,6 +81,11 @@
 									"id": "http://jsonschema.net/result/items/0/flag_cannot_craft",
 									"required":false
 								},
+								"style": {
+									"type":"integer",
+									"id": "http://jsonschema.net/result/items/0/style",
+									"required":false
+								},
 								"id": {
 									"type":"integer",
 									"id": "http://jsonschema.net/result/items/0/id",
@@ -128,6 +133,11 @@
 				},
 				"status": {
 					"type":"integer",
+					"id": "http://jsonschema.net/result/status",
+					"required":false
+				},
+				"statusDetail": {
+					"type":"string",
 					"id": "http://jsonschema.net/result/status",
 					"required":false
 				}
