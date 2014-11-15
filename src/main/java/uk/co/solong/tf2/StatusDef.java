@@ -1,5 +1,6 @@
 package uk.co.solong.tf2;
 
+@Deprecated
 public enum StatusDef {
 	SUCCESS(1L), MISSING_INVALID_ID(8L), PRIVATE(15L), NO_SUCH_ID(18L);
 

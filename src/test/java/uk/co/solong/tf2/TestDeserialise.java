@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class TestDeserialise {
-
+/*
 	@Test
 	public void shouldParsePrivateProfiles() throws JsonParseException,
 			JsonMappingException, IOException {
@@ -108,5 +108,5 @@ public class TestDeserialise {
 			}
 		}
 		assertEquals(Long.valueOf(5L), style);
-	}
+	}*/
 }

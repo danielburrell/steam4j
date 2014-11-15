@@ -1,5 +1,6 @@
 package uk.co.solong.tf2;
 
+@Deprecated
 public enum AttributeDef {
 	CRAFT_NUMBER(229L), SERIES(187L), GIFTWRAPPED(186L);
 	

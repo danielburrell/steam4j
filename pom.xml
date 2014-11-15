@@ -67,21 +67,37 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.0</version>
-                <configuration>
-                    <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
-                    <targetPackage>uk.co.solong.tf2</targetPackage>
-                    <sourceType>JSONSCHEMA</sourceType>
-                    <useLongIntegers>true</useLongIntegers>
-                </configuration>
+                <version>0.4.6</version>
                 <executions>
                     <execution>
+                    <id>backpack</id>
+                        <configuration>
+                            <sourceDirectory>${basedir}/src/main/resources/schema/backpack</sourceDirectory>
+                            <targetPackage>uk.co.solong.tf2.backpack</targetPackage>
+                            <sourceType>JSONSCHEMA</sourceType>
+                            <useLongIntegers>true</useLongIntegers>
+                            <classNamePrefix>Schema</classNamePrefix>
+                        </configuration>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                    <id>schema</id>
+                        <configuration>
+                            <sourceDirectory>${basedir}/src/main/resources/schema/schema</sourceDirectory>
+                            <targetPackage>uk.co.solong.tf2.schema</targetPackage>
+                            <sourceType>JSONSCHEMA</sourceType>
+                            <useLongIntegers>true</useLongIntegers>
+                            <classNamePrefix>Player</classNamePrefix>
+                        </configuration>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

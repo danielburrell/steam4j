@@ -1,0 +1,652 @@
+{
+    "type":"object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "id": "http://jsonschema.net",
+    "required":false,
+    "properties":{
+        "result": {
+            "type":"object",
+            "id": "http://jsonschema.net/result",
+            "required":false,
+            "properties":{
+                "attribute_controlled_attached_particles": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/attribute_controlled_attached_particles",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/attribute_controlled_attached_particles/0",
+                            "required":false,
+                            "properties":{
+                                "attach_to_rootbone": {
+                                    "type":"boolean",
+                                    "id": "http://jsonschema.net/result/attribute_controlled_attached_particles/0/attach_to_rootbone",
+                                    "required":false
+                                },
+                                "id": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/attribute_controlled_attached_particles/0/id",
+                                    "required":false
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attribute_controlled_attached_particles/0/name",
+                                    "required":false
+                                },
+                                "system": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attribute_controlled_attached_particles/0/system",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "attributes": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/attributes",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/attributes/0",
+                            "required":false,
+                            "properties":{
+                                "attribute_class": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attributes/0/attribute_class",
+                                    "required":false
+                                },
+                                "defindex": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/attributes/0/defindex",
+                                    "required":false
+                                },
+                                "description_format": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attributes/0/description_format",
+                                    "required":false
+                                },
+                                "description_string": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attributes/0/description_string",
+                                    "required":false
+                                },
+                                "effect_type": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attributes/0/effect_type",
+                                    "required":false
+                                },
+                                "hidden": {
+                                    "type":"boolean",
+                                    "id": "http://jsonschema.net/result/attributes/0/hidden",
+                                    "required":false
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/attributes/0/name",
+                                    "required":false
+                                },
+                                "stored_as_integer": {
+                                    "type":"boolean",
+                                    "id": "http://jsonschema.net/result/attributes/0/stored_as_integer",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "item_levels": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/item_levels",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/item_levels/0",
+                            "required":false,
+                            "properties":{
+                                "levels": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/result/item_levels/0/levels",
+                                    "required":false,
+                                    "items":
+                                        {
+                                            "type":"object",
+                                            "id": "http://jsonschema.net/result/item_levels/0/levels/0",
+                                            "required":false,
+                                            "properties":{
+                                                "level": {
+                                                    "type":"number",
+                                                    "id": "http://jsonschema.net/result/item_levels/0/levels/0/level",
+                                                    "required":false
+                                                },
+                                                "name": {
+                                                    "type":"string",
+                                                    "id": "http://jsonschema.net/result/item_levels/0/levels/0/name",
+                                                    "required":false
+                                                },
+                                                "required_score": {
+                                                    "type":"number",
+                                                    "id": "http://jsonschema.net/result/item_levels/0/levels/0/required_score",
+                                                    "required":false
+                                                }
+                                            }
+                                        }
+                                    
+
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/item_levels/0/name",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "item_sets": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/item_sets",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/item_sets/0",
+                            "required":false,
+                            "properties":{
+                                "attributes": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/result/item_sets/0/attributes",
+                                    "required":false,
+                                    "items":
+                                        {
+                                            "type":"object",
+                                            "id": "http://jsonschema.net/result/item_sets/0/attributes/0",
+                                            "required":false,
+                                            "properties":{
+                                                "class": {
+                                                    "type":"string",
+                                                    "id": "http://jsonschema.net/result/item_sets/0/attributes/0/class",
+                                                    "required":false
+                                                },
+                                                "name": {
+                                                    "type":"string",
+                                                    "id": "http://jsonschema.net/result/item_sets/0/attributes/0/name",
+                                                    "required":false
+                                                },
+                                                "value": {
+                                                    "type":"number",
+                                                    "id": "http://jsonschema.net/result/item_sets/0/attributes/0/value",
+                                                    "required":false
+                                                }
+                                            }
+                                        }
+                                    
+
+                                },
+                                "item_set": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/item_sets/0/item_set",
+                                    "required":false
+                                },
+                                "items": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/result/item_sets/0/items",
+                                    "required":false,
+                                    "items":
+                                        {
+                                            "type":"string",
+                                            "id": "http://jsonschema.net/result/item_sets/0/items/0",
+                                            "required":false
+                                        }
+                                    
+
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/item_sets/0/name",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "items_game_url": {
+                    "type":"string",
+                    "id": "http://jsonschema.net/result/items_game_url",
+                    "required":false
+                },
+                "items": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/items",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/items/0",
+                            "required":false,
+                            "properties":{
+                                "capabilities": {
+                                    "type":"object",
+                                    "id": "http://jsonschema.net/result/items/0/capabilities",
+                                    "required":false,
+                                    "properties":{
+                                        "can_be_restored": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_be_restored",
+                                            "required":false
+                                        },
+                                        "can_card_upgrade": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_card_upgrade",
+                                            "required":false
+                                        },
+                                        "can_consume": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_consume",
+                                            "required":false
+                                        },
+                                        "can_craft_mark": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_craft_mark",
+                                            "required":false
+                                        },
+                                        "can_killstreakify": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_killstreakify",
+                                            "required":false
+                                        },
+                                        "can_strangify": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/can_strangify",
+                                            "required":false
+                                        },
+                                        "nameable": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/nameable",
+                                            "required":false
+                                        },
+                                        "strange_parts": {
+                                            "type":"boolean",
+                                            "id": "http://jsonschema.net/result/items/0/capabilities/strange_parts",
+                                            "required":false
+                                        }
+                                    }
+                                },
+                                "craft_class": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/craft_class",
+                                    "required":false
+                                },
+                                "craft_material_type": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/craft_material_type",
+                                    "required":false
+                                },
+                                "defindex": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/items/0/defindex",
+                                    "required":false
+                                },
+                                "image_inventory": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/image_inventory",
+                                    "required":false
+                                },
+                                "image_url_large": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/image_url_large",
+                                    "required":false
+                                },
+                                "image_url": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/image_url",
+                                    "required":false
+                                },
+                                "item_class": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/item_class",
+                                    "required":false
+                                },
+                                "item_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/item_name",
+                                    "required":false
+                                },
+                                "item_quality": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/items/0/item_quality",
+                                    "required":false
+                                },
+                                "item_slot": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/item_slot",
+                                    "required":false
+                                },
+                                "item_type_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/item_type_name",
+                                    "required":false
+                                },
+                                "max_ilevel": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/items/0/max_ilevel",
+                                    "required":false
+                                },
+                                "min_ilevel": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/items/0/min_ilevel",
+                                    "required":false
+                                },
+                                "model_player": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/model_player",
+                                    "required":false
+                                },
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/items/0/name",
+                                    "required":false
+                                },
+                                "proper_name": {
+                                    "type":"boolean",
+                                    "id": "http://jsonschema.net/result/items/0/proper_name",
+                                    "required":false
+                                },
+                                "used_by_classes": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/result/items/0/used_by_classes",
+                                    "required":false,
+                                    "items":
+                                        {
+                                            "type":"string",
+                                            "id": "http://jsonschema.net/result/items/0/used_by_classes/0",
+                                            "required":false
+                                        }
+                                    
+
+                                }
+                            }
+                        }
+                    
+
+                },
+                "kill_eater_score_types": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/kill_eater_score_types",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/kill_eater_score_types/0",
+                            "required":false,
+                            "properties":{
+                                "level_data": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/kill_eater_score_types/0/level_data",
+                                    "required":false
+                                },
+                                "type_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/kill_eater_score_types/0/type_name",
+                                    "required":false
+                                },
+                                "type": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/kill_eater_score_types/0/type",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "originNames": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/originNames",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/originNames/0",
+                            "required":false,
+                            "properties":{
+                                "name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/originNames/0/name",
+                                    "required":false
+                                },
+                                "origin": {
+                                    "type":"number",
+                                    "id": "http://jsonschema.net/result/originNames/0/origin",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                },
+                "qualities": {
+                    "type":"object",
+                    "id": "http://jsonschema.net/result/qualities",
+                    "required":false,
+                    "properties":{
+                        "Normal": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/Normal",
+                            "required":false
+                        },
+                        "Unique": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/Unique",
+                            "required":false
+                        },
+                        "collectors": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/collectors",
+                            "required":false
+                        },
+                        "community": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/community",
+                            "required":false
+                        },
+                        "completed": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/completed",
+                            "required":false
+                        },
+                        "customized": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/customized",
+                            "required":false
+                        },
+                        "developer": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/developer",
+                            "required":false
+                        },
+                        "haunted": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/haunted",
+                            "required":false
+                        },
+                        "rarity1": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/rarity1",
+                            "required":false
+                        },
+                        "rarity2": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/rarity2",
+                            "required":false
+                        },
+                        "rarity3": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/rarity3",
+                            "required":false
+                        },
+                        "rarity4": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/rarity4",
+                            "required":false
+                        },
+                        "selfmade": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/selfmade",
+                            "required":false
+                        },
+                        "strange": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/strange",
+                            "required":false
+                        },
+                        "vintage": {
+                            "type":"integer",
+                            "id": "http://jsonschema.net/result/qualities/vintage",
+                            "required":false
+                        }
+                    }
+                },
+                "qualityNames": {
+                    "type":"object",
+                    "id": "http://jsonschema.net/result/qualityNames",
+                    "required":false,
+                    "properties":{
+                        "Normal": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/Normal",
+                            "required":false
+                        },
+                        "Unique": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/Unique",
+                            "required":false
+                        },
+                        "collectors": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/collectors",
+                            "required":false
+                        },
+                        "community": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/community",
+                            "required":false
+                        },
+                        "completed": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/completed",
+                            "required":false
+                        },
+                        "customized": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/customized",
+                            "required":false
+                        },
+                        "developer": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/developer",
+                            "required":false
+                        },
+                        "haunted": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/haunted",
+                            "required":false
+                        },
+                        "rarity1": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/rarity1",
+                            "required":false
+                        },
+                        "rarity2": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/rarity2",
+                            "required":false
+                        },
+                        "rarity3": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/rarity3",
+                            "required":false
+                        },
+                        "rarity4": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/rarity4",
+                            "required":false
+                        },
+                        "selfmade": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/selfmade",
+                            "required":false
+                        },
+                        "strange": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/strange",
+                            "required":false
+                        },
+                        "vintage": {
+                            "type":"string",
+                            "id": "http://jsonschema.net/result/qualityNames/vintage",
+                            "required":false
+                        }
+                    }
+                },
+                "status": {
+                    "type":"number",
+                    "id": "http://jsonschema.net/result/status",
+                    "required":false
+                },
+                "string_lookups": {
+                    "type":"array",
+                    "id": "http://jsonschema.net/result/string_lookups",
+                    "required":false,
+                    "items":
+                        {
+                            "type":"object",
+                            "id": "http://jsonschema.net/result/string_lookups/0",
+                            "required":false,
+                            "properties":{
+                                "strings": {
+                                    "type":"array",
+                                    "id": "http://jsonschema.net/result/string_lookups/0/strings",
+                                    "required":false,
+                                    "items":
+                                        {
+                                            "type":"object",
+                                            "id": "http://jsonschema.net/result/string_lookups/0/strings/0",
+                                            "required":false,
+                                            "properties":{
+                                                "index": {
+                                                    "type":"number",
+                                                    "id": "http://jsonschema.net/result/string_lookups/0/strings/0/index",
+                                                    "required":false
+                                                },
+                                                "string": {
+                                                    "type":"string",
+                                                    "id": "http://jsonschema.net/result/string_lookups/0/strings/0/string",
+                                                    "required":false
+                                                }
+                                            }
+                                        }
+                                    
+
+                                },
+                                "table_name": {
+                                    "type":"string",
+                                    "id": "http://jsonschema.net/result/string_lookups/0/table_name",
+                                    "required":false
+                                }
+                            }
+                        }
+                    
+
+                }
+            }
+        }
+    }
+}
