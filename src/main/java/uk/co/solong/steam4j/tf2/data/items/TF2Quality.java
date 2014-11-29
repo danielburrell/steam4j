@@ -1,4 +1,4 @@
-package uk.co.solong.steam4j.tf2.data;
+package uk.co.solong.steam4j.tf2.data.items;
 
 public enum TF2Quality {
     NORMAL(0), GENUINE(1), RARITY2(2), VINTAGE(3), RARITY3(4), UNUSUAL(5), UNIQUE(6), COMMUNITY(7), VALVE(8), SELFMADE(9), CUSTOMIZED(10), STRANGE(11), COMPLETED(

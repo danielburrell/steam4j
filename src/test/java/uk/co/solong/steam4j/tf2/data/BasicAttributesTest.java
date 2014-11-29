@@ -8,6 +8,9 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+import uk.co.solong.steam4j.tf2.data.items.TF2Backpack;
+import uk.co.solong.steam4j.tf2.data.items.TF2Item;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
