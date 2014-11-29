@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>uk.co.solong</groupId>
-    <artifactId>hatf2-pojo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>HatF2 POJO</name>
+    <artifactId>steam-pojo</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
+    <name>Steam POJO</name>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -64,40 +64,7 @@
     </profiles>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.jsonschema2pojo</groupId>
-                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>0.4.6</version>
-                <executions>
-                    <execution>
-                    <id>backpack</id>
-                        <configuration>
-                            <sourceDirectory>${basedir}/src/main/resources/schema/backpack</sourceDirectory>
-                            <targetPackage>uk.co.solong.tf2.backpack</targetPackage>
-                            <sourceType>JSONSCHEMA</sourceType>
-                            <useLongIntegers>true</useLongIntegers>
-                            <classNamePrefix>Schema</classNamePrefix>
-                        </configuration>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                    <id>schema</id>
-                        <configuration>
-                            <sourceDirectory>${basedir}/src/main/resources/schema/schema</sourceDirectory>
-                            <targetPackage>uk.co.solong.tf2.schema</targetPackage>
-                            <sourceType>JSONSCHEMA</sourceType>
-                            <useLongIntegers>true</useLongIntegers>
-                            <classNamePrefix>Player</classNamePrefix>
-                        </configuration>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-           
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -164,12 +131,27 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>3.0.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.4</version>
+        </dependency>
     </dependencies>
     <scm>
         <url>https://github.com/danielburrell/hatf2-pojo</url>
         <connection>scm:git:git://github.com/danielburrell/hatf2-pojo.git</connection>
         <developerConnection>scm:git:git@github.com:danielburrell/hatf2-pojo.git</developerConnection>
     </scm>
-    <url>www.solong.co.uk/hatf2</url>
-    <description>A collection of classes which allow for Object based manipulation of data responses from Steam API's TF2 Backpack/Schema responses.</description>
+    <url>www.solong.co.uk/steampojo</url>
+    <description>A client library for Steam's TF2 Backpack/Schema API.</description>
 </project>

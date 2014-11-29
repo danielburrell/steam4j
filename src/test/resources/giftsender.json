@@ -1,0 +1,48 @@
+{
+	"result": {
+		"status": 1,
+		"num_backpack_slots": 2000,
+		"items": [
+			{
+				"id": 139752071,
+				"original_id": 139752071,
+				"defindex": 261,
+				"level": 10,
+				"quality": 6,
+				"inventory": 2147485319,
+				"quantity": 1,
+				"origin": 5,
+				"style": 5,
+				"flag_cannot_trade": true,
+				"attributes": [
+					{
+						"defindex": 292,
+						"value": 1115684864,
+						"float_value": 64
+					},
+					{
+						"defindex": 388,
+						"value": 1115684864,
+						"float_value": 64
+					},
+					{
+                        "defindex": 186,
+                        "value": 72309368,
+                        "float_value": 2.4374274274736568e-036,
+                        "account_info": {
+                            "steamid": 76561198032575096,
+                            "personaname": "Timber"
+                        }
+                    },
+					{
+						"defindex": 153,
+						"value": 1065353216,
+						"float_value": 1
+					}
+				]
+				
+			}
+		]
+		
+	}
+}
