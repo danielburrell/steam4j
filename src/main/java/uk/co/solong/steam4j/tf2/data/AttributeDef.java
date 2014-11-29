@@ -1,4 +1,4 @@
-package uk.co.solong.steampojo.tf2.data;
+package uk.co.solong.steam4j.tf2.data;
 
 public enum AttributeDef {
     CRAFT_NUMBER(229L), SERIES(187L), GIFTWRAPPED(186L);

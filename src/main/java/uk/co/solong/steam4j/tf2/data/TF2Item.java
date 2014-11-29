@@ -1,4 +1,4 @@
-package uk.co.solong.steampojo.tf2.data;
+package uk.co.solong.steam4j.tf2.data;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

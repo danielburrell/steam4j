@@ -1,4 +1,4 @@
-package uk.co.solong.steampojo.tf2;
+package uk.co.solong.steam4j.tf2;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +14,7 @@ import org.springframework.retry.backoff.FixedBackOffPolicy;
 import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
 
-import uk.co.solong.steampojo.tf2.data.TF2Backpack;
+import uk.co.solong.steam4j.tf2.data.TF2Backpack;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package uk.co.solong.steampojo.tf2.data;
+package uk.co.solong.steam4j.tf2.data;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -8,8 +8,8 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import uk.co.solong.steampojo.tf2.data.TF2Backpack;
-import uk.co.solong.steampojo.tf2.data.TF2Item;
+import uk.co.solong.steam4j.tf2.data.TF2Backpack;
+import uk.co.solong.steam4j.tf2.data.TF2Item;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;

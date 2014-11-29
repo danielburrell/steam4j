@@ -1,4 +1,4 @@
-package uk.co.solong.steampojo.tf2.data;
+package uk.co.solong.steam4j.tf2.data;
 
 public enum Status {
     SUCCESS(1), STEAMID_INVALID_MISSING(8), PRIVATE(15), NO_SUCH_STEAMID(18), UNKNOWN_STATUS(-1);
