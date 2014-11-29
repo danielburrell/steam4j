@@ -5,20 +5,22 @@ Designed with TDD in mind, Steam4J allows you to test your application using dum
 
 Quickstart
 =======
+
 ```xml
- <dependency>
-            <groupId>uk.co.solong</groupId>
-            <artifactId>steam4j</artifactId>
-            <version>2.0.1</version>
-        </dependency>
+<dependency>
+    <groupId>uk.co.solong</groupId>
+    <artifactId>steam4j</artifactId>
+    <version>2.0.1</version>
+</dependency>
 ```
 
 ```java
 TF2Template dao = new TF2Template("API_KEY_HERE");
-TF2Backpack backpack = dao.getPlayerItems(76561197971384027)
+TF2Backpack backpack = dao.getPlayerItems(76561197971384027L)
 if (Status.SUCCESS.equals(backpack.getStatus()){
     for (Item item: backpack.getItems()) {
         System.out.println(item.getLevel());
+        //...
     }
 }
 ```

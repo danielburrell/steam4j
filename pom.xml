@@ -3,7 +3,7 @@
     <groupId>uk.co.solong</groupId>
     <artifactId>steam4j</artifactId>
     <version>2.0.1-SNAPSHOT</version>
-    <name>Steam4J</name>
+    <name>Steam4j</name>
     <licenses>
         <license>
             <name>MIT License</name>
