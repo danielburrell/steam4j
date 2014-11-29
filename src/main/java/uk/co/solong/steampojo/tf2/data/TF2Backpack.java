@@ -12,8 +12,10 @@ public class TF2Backpack {
     private final List<TF2Item> items;
 
     /**
-     * Creates a new TF2Backpack given an unmodified JSON representation from the Steam GetPlayerItems api call.
-     * It is necessary to provide the steamId, since the steamId is not recorded within the backpack data.
+     * Creates a new TF2Backpack given an unmodified JSON representation from
+     * the Steam GetPlayerItems api call. It is necessary to provide the
+     * steamId, since the steamId is not recorded within the backpack data.
+     * 
      * @param rootNode
      * @param steamId
      */

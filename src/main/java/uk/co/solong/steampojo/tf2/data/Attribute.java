@@ -10,20 +10,24 @@ public class Attribute {
     private String floatValue;
     private Long steamId;
     private String steamDisplayName;
-    
+
     public Attribute(JsonNode rootNode) {
+
         JsonNode defindexNode = rootNode.path("defindex");
         if (!defindexNode.isMissingNode()) {
             defIndex = defindexNode.asLong();
         }
+
         JsonNode valueNode = rootNode.path("value");
         if (!valueNode.isMissingNode()) {
             value = valueNode.bigIntegerValue();
         }
+
         JsonNode floatValueNode = rootNode.path("floatValue");
         if (!floatValueNode.isMissingNode()) {
             floatValue = floatValueNode.asText();
         }
+
         JsonNode accountInfoNode = rootNode.path("account_info");
         if (!accountInfoNode.isMissingNode()) {
             JsonNode steamidNode = accountInfoNode.path("steamid");
@@ -35,20 +39,25 @@ public class Attribute {
                 steamDisplayName = personanameNode.asText();
             }
         }
+
     }
-    
+
     public Long getDefIndex() {
         return defIndex;
     }
+
     public BigInteger getValue() {
         return value;
     }
+
     public String getFloatValue() {
         return floatValue;
     }
+
     public Long getSteamId() {
         return steamId;
     }
+
     public String getSteamDisplayName() {
         return steamDisplayName;
     }

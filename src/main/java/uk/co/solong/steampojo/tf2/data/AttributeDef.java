@@ -1,20 +1,20 @@
 package uk.co.solong.steampojo.tf2.data;
 
 public enum AttributeDef {
-	CRAFT_NUMBER(229L), SERIES(187L), GIFTWRAPPED(186L) ;
-	
-	private Long defindex;
+    CRAFT_NUMBER(229L), SERIES(187L), GIFTWRAPPED(186L);
 
-	AttributeDef(Long defindex) {
-		this.defindex = defindex;
-	}
+    private Long defindex;
 
-	public Long getDefindex() {
-		return defindex;
-	}
+    AttributeDef(Long defindex) {
+        this.defindex = defindex;
+    }
 
-	public void setDefindex(Long defindex) {
-		this.defindex = defindex;
-	}
+    public Long getDefindex() {
+        return defindex;
+    }
+
+    public void setDefindex(Long defindex) {
+        this.defindex = defindex;
+    }
 
 }
