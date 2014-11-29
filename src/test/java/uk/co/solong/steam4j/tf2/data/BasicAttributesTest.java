@@ -8,9 +8,6 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import uk.co.solong.steam4j.tf2.data.TF2Backpack;
-import uk.co.solong.steam4j.tf2.data.TF2Item;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -45,6 +42,7 @@ public class BasicAttributesTest {
         }
         assertFalse(isCraftable);
     }
+
     @Test
     public void shouldParseCraftable() throws JsonParseException, JsonMappingException, IOException {
         ObjectMapper m = new ObjectMapper();
@@ -72,7 +70,7 @@ public class BasicAttributesTest {
         }
         assertFalse(isTradable);
     }
-    
+
     @Test
     public void shouldParseTradable() throws JsonParseException, JsonMappingException, IOException {
         ObjectMapper m = new ObjectMapper();

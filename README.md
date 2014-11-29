@@ -16,9 +16,9 @@ Quickstart
 
 ```java
 TF2Template dao = new TF2Template("API_KEY_HERE");
-TF2Backpack backpack = dao.getPlayerItems(76561197971384027L)
-if (Status.SUCCESS.equals(backpack.getStatus()){
-    for (Item item: backpack.getItems()) {
+TF2Backpack backpack = dao.getPlayerItems(76561197971384027L);
+if (Status.SUCCESS.equals(backpack.getStatus())){
+    for (TF2Item item: backpack.getItems()) {
         System.out.println(item.getLevel());
         //...
     }

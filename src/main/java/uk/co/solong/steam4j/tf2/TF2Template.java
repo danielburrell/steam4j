@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class TF2Template {
     private static final Logger logger = LoggerFactory.getLogger(TF2Template.class);
 
-    private static final String DEFAULT_BASE_URL = "http://api.steamcommunity.com";
+    private static final String DEFAULT_BASE_URL = "http://api.steampowered.com";
     private final String apiKey;
     private final String apiUrlTemplate;
     private static final String apiGetPlayerItems = "/IEconItems_440/GetPlayerItems/v0001/?key={key}&steamId={steamId}";
@@ -43,7 +43,8 @@ public class TF2Template {
                 Reader streamReader = null;
                 try {
                     logWarningIfThisIsARetryAttempt(context);
-                    InputStream input = new URL(apiUrlTemplate.replace("{steamId}", steamId.toString())).openStream();
+                    String url = apiUrlTemplate.replace("{steamId}", steamId.toString());
+                    InputStream input = new URL(url).openStream();
                     streamReader = new InputStreamReader(input, "UTF-8");
                     ObjectMapper m = new ObjectMapper();
                     JsonNode jsonBackpack = m.readTree(streamReader);
