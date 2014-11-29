@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>uk.co.solong</groupId>
-    <artifactId>steam-pojo</artifactId>
+    <artifactId>steam4j</artifactId>
     <version>2.0.1-SNAPSHOT</version>
-    <name>Steam POJO</name>
+    <name>Steam4J</name>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -148,10 +148,10 @@
         </dependency>
     </dependencies>
     <scm>
-        <url>https://github.com/danielburrell/hatf2-pojo</url>
-        <connection>scm:git:git://github.com/danielburrell/hatf2-pojo.git</connection>
-        <developerConnection>scm:git:git@github.com:danielburrell/hatf2-pojo.git</developerConnection>
+        <url>https://github.com/danielburrell/steam4j</url>
+        <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
+        <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
     </scm>
-    <url>www.solong.co.uk/steampojo</url>
+    <url>www.solong.co.uk/steam4j</url>
     <description>A client library for Steam's TF2 Backpack/Schema API.</description>
 </project>
