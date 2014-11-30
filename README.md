@@ -5,11 +5,11 @@ Steam4j is a Java based client library for accessing the Steam API.
 ##Features
  - Clean, simple data access layer and data objects
  - Access to underlying API data for ultimate control
- - Spring-like template-based data access objects.
+ - Threadsafe Spring-like template-based data access objects.
  - Built in schema caching based on 'last-modified' headers. Forced refresh available.
  - Ultra fast serialisation via Jackson - 700 nanoseconds per 2000 slot backpack.
  - Simplified access to the most common item attributes.
- - Compatible with services like mockable.io.
+ - Compatible with services like mockable.io for easy testing.
 
 ##Quickstart
 
@@ -44,5 +44,5 @@ if (Status.SUCCESS.equals(schema.getStatus())){
 ```
 
 ##Performance Highlights
- - Deserialize a full backpack containing 2000 items in just *700 nanoseconds*. 
- - Deserialize over 1420 full size backpacks per second per thread.
+ - Deserialize a full backpack containing 2000 items in under *700 nanoseconds*.
+ - Over 1420 full size backpacks per second per thread.
