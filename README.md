@@ -1,11 +1,19 @@
 steam4j
 =======
-Steam4j is a client library for accessing the Steam API. It uses 'Spring-esque' template classes to enable you to quickly access the steam API with common sense settings.
-Designed with TDD in mind, Steam4J allows you to test your application using dummy data easily.
+Steam4j is a Java based client library for accessing the Steam API.
 
-Quickstart
-=======
+##Features
+ - Clean, simple data access layer and data objects
+ - Access to underlying API data for ultimate control
+ - Spring-like template-based data access objects.
+ - Built in schema caching based on 'last-modified' headers. Forced refresh available.
+ - Ultra fast serialisation via Jackson.
+ - Simplified access to the most common item attributes.
+ - Compatible with services like mockable.io.
 
+##Quickstart
+
+###Maven
 ```xml
 <dependency>
     <groupId>uk.co.solong</groupId>
@@ -13,7 +21,8 @@ Quickstart
     <version>2.0.1</version>
 </dependency>
 ```
-
+ 
+###Retrieving a backpack
 ```java
 TF2Template dao = new TF2Template("API_KEY_HERE");
 TF2Backpack backpack = dao.getPlayerItems(76561197971384027L);
@@ -22,5 +31,14 @@ if (Status.SUCCESS.equals(backpack.getStatus())){
         System.out.println(item.getLevel());
         //...
     }
+}
+```
+
+###Retrieving the schema
+```java
+TF2Template dao = new TF2Template("API_KEY_HERE");
+TF2Schema schema = dao.getSchema();
+if (Status.SUCCESS.equals(schema.getStatus())){
+    List<TF2SchemaQuality> qualities = schema.getActiveQualityMap();
 }
 ```
