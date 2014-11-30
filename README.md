@@ -42,3 +42,7 @@ if (Status.SUCCESS.equals(schema.getStatus())){
     List<TF2SchemaQuality> qualities = schema.getActiveQualityMap();
 }
 ```
+
+##Performance Highlights
+ - Deserialize a full backpack containing 2000 items in just *700 nanoseconds*. 
+ - Deserialize over 1420 full size backpacks per second per thread.
