@@ -1,6 +1,6 @@
 steam4j
 =======
-Steam4j is a Java based client library for accessing the Steam API.
+Steam4j is a Java based 3rd party client library for accessing the Steam API.
 
 ##Features
  - Clean, simple data access layer and data objects
@@ -46,3 +46,6 @@ if (Status.SUCCESS.equals(schema.getStatus())){
 ##Performance Highlights
  - Deserialize a full backpack containing 2000 items in under *700 nanoseconds*.
  - Over 1420 full size backpacks per second per thread.
+ 
+ ##Legal
+ Steam4j and solong.co.uk are unaffiliated with steampowered.com. Any trademarks such as Team Fortress 2, Steam, Valve are copyright of their respective owners.
