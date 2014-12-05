@@ -46,7 +46,7 @@
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.4</version>
                         <configuration>
-                            <passphrase></passphrase>
+                            <passphrase />
                         </configuration>
                         <executions>
                             <execution>
@@ -154,7 +154,8 @@
         <url>https://github.com/danielburrell/steam4j</url>
         <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
         <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
-    </scm>
+      <tag>steam4j-2.0.1</tag>
+  </scm>
     <url>www.solong.co.uk/steam4j</url>
     <description>A client library for Steam's TF2 Backpack/Schema API.</description>
 </project>
