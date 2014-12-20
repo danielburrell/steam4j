@@ -18,7 +18,7 @@ Steam4j is a Java based 3rd party client library for accessing the Steam API.
 <dependency>
     <groupId>uk.co.solong</groupId>
     <artifactId>steam4j</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.15</version>
 </dependency>
 ```
  
