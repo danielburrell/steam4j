@@ -77,5 +77,5 @@ public class SteamDaoConfig {
  - Deserialize a full backpack containing 2000 items in under *700 nanoseconds*.
  - Over 1420 full size backpacks per second per thread.
  
- ##Legal
+##Legal
  Steam4j and solong.co.uk are unaffiliated with steampowered.com. Any trademarks such as Team Fortress 2, Steam, Valve are copyright of their respective owners.
