@@ -18,6 +18,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.retry.RetryCallback;
 import org.springframework.retry.RetryContext;
 import org.springframework.retry.backoff.FixedBackOffPolicy;
+import org.springframework.retry.policy.NeverRetryPolicy;
 import org.springframework.retry.policy.SimpleRetryPolicy;
 import org.springframework.retry.support.RetryTemplate;
 import org.springframework.web.client.RequestCallback;
@@ -82,14 +83,19 @@ public class TF2Template {
     private final RestTemplate restTemplate;
     private final String language;
     private final ConcurrentMap<String, TF2Schema> schemaCache;
+    private final boolean autoRetry;
 
     protected volatile long lastModified;
 
     public TF2Template(String apiKey) {
-        this(apiKey, DEFAULT_BASE_URL, "en_US");
+        this(apiKey, false);
     }
 
-    public TF2Template(String apiKey, String baseUrl, String language) {
+    public TF2Template(String apiKey, boolean autoRetry) {
+        this(apiKey, DEFAULT_BASE_URL, "en_US", autoRetry);
+    }
+
+    public TF2Template(String apiKey, String baseUrl, String language, boolean autoRetry) {
         this.apiKey = apiKey;
         urls = new HashMap<API_URL_KEYS, String>();
         urls.put(API_URL_KEYS.GetPlayerItems, baseUrl + apiGetPlayerItems);
@@ -97,6 +103,7 @@ public class TF2Template {
         restTemplate = new RestTemplate();
         this.language = language;
         this.schemaCache = new ConcurrentHashMap<String, TF2Schema>(1);
+        this.autoRetry = autoRetry;
     }
 
     public TF2Schema getSchema() {
@@ -199,12 +206,16 @@ public class TF2Template {
 
     private RetryTemplate createRetryTemplate() {
         RetryTemplate template = new RetryTemplate();
-        FixedBackOffPolicy bop = new FixedBackOffPolicy();
-        bop.setBackOffPeriod(60000L);
-        template.setBackOffPolicy(bop);
-        SimpleRetryPolicy policy = new SimpleRetryPolicy();
-        policy.setMaxAttempts(3);
-        template.setRetryPolicy(policy);
+        if (autoRetry) {
+            FixedBackOffPolicy bop = new FixedBackOffPolicy();
+            bop.setBackOffPeriod(60000L);
+            template.setBackOffPolicy(bop);
+            SimpleRetryPolicy policy = new SimpleRetryPolicy();
+            policy.setMaxAttempts(3);
+            template.setRetryPolicy(policy);
+        } else {
+            template.setRetryPolicy(new NeverRetryPolicy());
+        }
         return template;
     }
 
