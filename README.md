@@ -10,6 +10,8 @@ Steam4j is a Java based 3rd party client library for accessing the Steam API.
  - Ultra fast serialisation via Jackson - 700 nanoseconds per 2000 slot backpack.
  - Simplified access to the most common item attributes.
  - Compatible with services like mockable.io for easy testing.
+ - Built in retry logic (switched off by default)
+ - Limiter capabilities to comply with Steam's 100,000 calls per day limit (unlimited by default)
 
 ##Quickstart
 
@@ -19,6 +21,15 @@ Steam4j is a Java based 3rd party client library for accessing the Steam API.
     <groupId>uk.co.solong</groupId>
     <artifactId>steam4j</artifactId>
     <version>2.0.15</version>
+</dependency>
+```
+
+Collections: (only required to make use of Limiter capabilities)
+```xml
+<dependency>
+    <groupId>uk.co.solong</groupId>
+    <artifactId>collections</artifactId>
+    <version>0.0.2</version>
 </dependency>
 ```
  
@@ -40,6 +51,25 @@ TF2Template dao = new TF2Template("API_KEY_HERE");
 TF2Schema schema = dao.getSchema();
 if (Status.SUCCESS.equals(schema.getStatus())){
     List<TF2SchemaQuality> qualities = schema.getActiveQualityMap();
+}
+```
+
+###Spring JavaConfig Usage
+```java
+@Configuration
+public class SteamDaoConfig {
+
+    @Value("${steam.key}")
+    private String key;
+
+    @Bean
+    public TF2Template steamDao() {
+        boolean autoRetry = true;
+        TF2Template steamDao = new TF2Template(key, autoRetry);
+        Limiter limiter = new SimpleLimiter(100000,Duration.standardDays(1));
+        steamDao.setLimiter(limiter);
+        return steamDao;
+    }
 }
 ```
 
