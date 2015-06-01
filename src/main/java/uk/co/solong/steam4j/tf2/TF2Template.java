@@ -25,6 +25,8 @@ import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 
+import uk.co.solong.collections.limiter.Limiter;
+import uk.co.solong.collections.limiter.NoopLimiter;
 import uk.co.solong.steam4j.tf2.data.items.TF2Backpack;
 import uk.co.solong.steam4j.tf2.data.schema.ResponseData;
 import uk.co.solong.steam4j.tf2.data.schema.TF2Schema;
@@ -87,6 +89,8 @@ public class TF2Template {
 
     protected volatile long lastModified;
 
+    private Limiter limiter;
+
     public TF2Template(String apiKey) {
         this(apiKey, false);
     }
@@ -104,6 +108,7 @@ public class TF2Template {
         this.language = language;
         this.schemaCache = new ConcurrentHashMap<String, TF2Schema>(1);
         this.autoRetry = autoRetry;
+        this.limiter = new NoopLimiter();
     }
 
     public TF2Schema getSchema() {
@@ -115,6 +120,11 @@ public class TF2Template {
         RetryTemplate template = createRetryTemplate();
         final TF2Schema schema = template.execute(new RetryCallback<TF2Schema, RuntimeException>() {
             public TF2Schema doWithRetry(RetryContext context) {
+                try {
+                    limiter.clockIn();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 logWarningIfThisIsARetryAttempt(context);
 
                 Map<String, String> urlVariables = new HashMap<String, String>(2);
@@ -158,6 +168,11 @@ public class TF2Template {
         RetryTemplate template = createRetryTemplate();
         final TF2Backpack backpack = template.execute(new RetryCallback<TF2Backpack, RuntimeException>() {
             public TF2Backpack doWithRetry(RetryContext context) {
+                try {
+                    limiter.clockIn();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 logWarningIfThisIsARetryAttempt(context);
 
                 Map<String, String> urlVariables = new HashMap<String, String>(2);
@@ -221,6 +236,14 @@ public class TF2Template {
 
     String getApiKey() {
         return apiKey;
+    }
+
+    Limiter getLimiter() {
+        return limiter;
+    }
+
+    public void setLimiter(Limiter limiter) {
+        this.limiter = limiter;
     }
 
 }

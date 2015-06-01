@@ -158,6 +158,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>uk.co.solong</groupId>
+            <artifactId>collections</artifactId>
+            <version>0.0.2</version>
+        </dependency>
     </dependencies>
     <scm>
         <url>https://github.com/danielburrell/steam4j</url>
