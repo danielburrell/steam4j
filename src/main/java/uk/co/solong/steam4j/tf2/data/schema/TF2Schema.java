@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import uk.co.solong.steam4j.tf2.data.items.TF2Item;
-
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class TF2Schema {
@@ -22,39 +20,35 @@ public class TF2Schema {
 
     /**
      * 
-     * @return a list of TF2SchemaItems representing containing only name and defindex
-     *         items.
+     * @return a list of TF2SchemaItems representing containing only name and
+     *         defindex items.
      */
-    public List<TF2SchemaItem> getItemsWithNameAndDefIndex() {
+    public JsonNode getRawItems() {
         JsonNode items = root.path("result").path("items");
-        if (!items.isMissingNode()) {
-            List<TF2SchemaItem> result = new ArrayList<TF2SchemaItem>(items.size());
-            for (JsonNode item : items) {
-                TF2SchemaItem itemCandidate = new TF2SchemaItem();
-                itemCandidate.setDefIndex(item.path("defindex").asLong());
-                itemCandidate.setName(item.path("item_name").asText());
-                result.add(itemCandidate);
-            }
-            return result;
-        } else {
-            return new ArrayList<TF2SchemaItem>(0);
-        }
+        return items;
     }
-    
+
     /**
      * 
-     * @return a list of TF2SchemaItems representing containing only name and defindex
-     *         items.
+     * @return a list of TF2SchemaItems representing containing only name and
+     *         defindex items.
      */
-    public List<TF2SchemaItem> getItemsWithNameAndDefIndexAndImage() {
+    public JsonNode getRawQualities() {
+        JsonNode qualitiesNode = root.path("result").path("qualities");
+        return qualitiesNode;
+    }
+
+    /**
+     * 
+     * @return a list of TF2SchemaItems
+     */
+
+    public List<TF2SchemaItem> getItems() {
         JsonNode items = root.path("result").path("items");
         if (!items.isMissingNode()) {
             List<TF2SchemaItem> result = new ArrayList<TF2SchemaItem>(items.size());
             for (JsonNode item : items) {
-                TF2SchemaItem itemCandidate = new TF2SchemaItem();
-                itemCandidate.setDefIndex(item.path("defindex").asLong());
-                itemCandidate.setName(item.path("item_name").asText());
-                itemCandidate.setImage(item.path("image_url").asText());
+                TF2SchemaItem itemCandidate = new TF2SchemaItem(item);
                 result.add(itemCandidate);
             }
             return result;
@@ -62,41 +56,45 @@ public class TF2Schema {
             return new ArrayList<TF2SchemaItem>(0);
         }
     }
-    
+
     public Map<Integer, TF2SchemaQuality> getCompleteQualityMap() {
-        JsonNode qualitiesNode = root.path("result").path("qualities");
-        JsonNode qualityNamesNode = root.path("result").path("qualityNames");
-        if (!qualitiesNode.isMissingNode()) {
-            Map<Integer,TF2SchemaQuality> qualityMap = new HashMap<Integer,TF2SchemaQuality>();
-            Iterator<Entry<String, JsonNode>> i = qualitiesNode.fields();
-            while (i.hasNext()) {
-                Entry<String,JsonNode> qualityEntry = i.next();
-                int id = qualityEntry.getValue().asInt();
-                String internalname = qualityEntry.getKey();
-                TF2SchemaQuality quality = new TF2SchemaQuality(id,qualityNamesNode.path(internalname).asText());
-                qualityMap.put(id, quality);
+        try {
+            JsonNode qualitiesNode = root.path("result").path("qualities");
+            JsonNode qualityNamesNode = root.path("result").path("qualityNames");
+            if (!qualitiesNode.isMissingNode()) {
+                Map<Integer, TF2SchemaQuality> qualityMap = new HashMap<Integer, TF2SchemaQuality>();
+                Iterator<Entry<String, JsonNode>> i = qualitiesNode.fields();
+                while (i.hasNext()) {
+                    Entry<String, JsonNode> qualityEntry = i.next();
+                    int id = qualityEntry.getValue().asInt();
+                    String internalname = qualityEntry.getKey();
+                    TF2SchemaQuality quality = new TF2SchemaQuality(id, qualityNamesNode.path(internalname).asText());
+                    qualityMap.put(id, quality);
+                }
+                return qualityMap;
+            } else {
+                return new HashMap<Integer, TF2SchemaQuality>();
             }
-            return qualityMap;
-        } else {
-            return null;
+        } catch (Throwable t) {
+            return new HashMap<Integer, TF2SchemaQuality>();
         }
     }
-    
+
     public Map<Integer, TF2SchemaQuality> getActiveQualityMap() {
         Map<Integer, TF2SchemaQuality> qualityMap = getCompleteQualityMap();
         List<Integer> removables = new LinkedList<Integer>();
         for (Integer id : qualityMap.keySet()) {
             String candidate = qualityMap.get(id).getName();
-            if (Character.isLowerCase(candidate.charAt(0)) && (Character.isDigit(candidate.charAt(candidate.length()-1)))){
+            if (Character.isLowerCase(candidate.charAt(0)) && (Character.isDigit(candidate.charAt(candidate.length() - 1)))) {
                 removables.add(id);
             }
         }
-        for (int removable: removables){
+        for (int removable : removables) {
             qualityMap.remove(removable);
         }
         return qualityMap;
     }
-    
+
     public JsonNode getRawData() {
         return root;
     }

@@ -55,6 +55,11 @@ public class TF2Backpack {
     public int getBackpackSlots() {
         return backpackSlots;
     }
+    
+    public int getRemainingBackpackSlots() {
+        return backpackSlots-items.size();
+    }
+    
 
     public List<TF2Item> getItems() {
         return items;
