@@ -2,6 +2,7 @@ package uk.co.solong.steam4j.tf2.data;
 
 import java.io.IOException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import uk.co.solong.steam4j.tf2.data.items.TF2Backpack;
@@ -12,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PerformanceTest {
 
-    @Test
+    @Test @Ignore
     public void testConstructionPerformance() throws JsonProcessingException, IOException {
         ObjectMapper m = new ObjectMapper();
         JsonNode n = m.readTree(getClass().getResourceAsStream("/4027.json"));
