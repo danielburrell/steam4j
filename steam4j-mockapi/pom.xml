@@ -3,7 +3,7 @@
     <parent>
         <groupId>uk.co.solong</groupId>
         <artifactId>steam4j</artifactId>
-        <version>2.0.21-SNAPSHOT</version>
+        <version>2.0.21</version>
     </parent>
     <artifactId>steam4j-mockapi</artifactId>
     <name>Steam4j-mockapi</name>
@@ -236,7 +236,7 @@
         <url>https://github.com/danielburrell/steam4j</url>
         <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
         <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>steam4j-2.0.21</tag>
     </scm>
     <url>www.solong.co.uk/steam4j</url>
     <description>A client library for Steam's TF2 Backpack/Schema API.</description>
