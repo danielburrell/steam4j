@@ -3,7 +3,7 @@
     <parent>
         <groupId>uk.co.solong</groupId>
         <artifactId>steam4j</artifactId>
-        <version>2.0.20</version>
+        <version>2.0.21-SNAPSHOT</version>
     </parent>
     <artifactId>steam4j-tf2client</artifactId>
     <name>Steam4j-tf2client</name>
@@ -171,7 +171,7 @@
         <url>https://github.com/danielburrell/steam4j</url>
         <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
         <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
-        <tag>steam4j-2.0.20</tag>
+        <tag>HEAD</tag>
     </scm>
     <url>www.solong.co.uk/steam4j</url>
     <description>A client library for Steam's TF2 Backpack/Schema API.</description>
