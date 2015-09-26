@@ -1,12 +1,10 @@
 package uk.co.solong.steam4j.tf2.data.items;
 
-import java.math.BigInteger;
-
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class Attribute {
     private Long defIndex;
-    private BigInteger value;
+    private Long value;
     private String floatValue;
     private Long steamId;
     private String steamDisplayName;
@@ -20,10 +18,10 @@ public class Attribute {
 
         JsonNode valueNode = rootNode.path("value");
         if (!valueNode.isMissingNode()) {
-            value = valueNode.bigIntegerValue();
+            value = valueNode.asLong();
         }
 
-        JsonNode floatValueNode = rootNode.path("floatValue");
+        JsonNode floatValueNode = rootNode.path("float_value");
         if (!floatValueNode.isMissingNode()) {
             floatValue = floatValueNode.asText();
         }
@@ -46,7 +44,7 @@ public class Attribute {
         return defIndex;
     }
 
-    public BigInteger getValue() {
+    public Long getValue() {
         return value;
     }
 

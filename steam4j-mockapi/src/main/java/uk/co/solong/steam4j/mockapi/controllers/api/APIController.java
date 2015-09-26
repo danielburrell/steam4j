@@ -3,6 +3,7 @@ package uk.co.solong.steam4j.mockapi.controllers.api;
 import java.io.File;
 import java.io.IOException;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +29,7 @@ public class APIController {
     @RequestMapping("/GetPlayerItems/v0001/")
     public JsonNode getPlayerItems(String key, Long steamId) throws JsonProcessingException, IOException {
         ObjectMapper m = new ObjectMapper();
-        return m.readTree(new File(getClass().getResource("/assets/4027.json").getFile()));
+        return m.readTree(new ClassPathResource("/assets/4027.json").getInputStream());//new File(getClass().getResource("").getFile()));
     }
 
     /*

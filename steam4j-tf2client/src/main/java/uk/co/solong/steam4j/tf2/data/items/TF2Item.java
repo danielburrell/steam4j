@@ -1,6 +1,5 @@
 package uk.co.solong.steam4j.tf2.data.items;
 
-import java.math.BigInteger;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -137,7 +136,9 @@ public class TF2Item {
     public Long getSeries() {
         for (Attribute attribute : attributes) {
             if (AttributeDef.SERIES.getDefindex().equals(attribute.getDefIndex())) {
-                return Long.parseLong(attribute.getFloatValue());
+                if (attribute.getFloatValue() != null) {
+                    return Long.parseLong(attribute.getFloatValue());
+                } 
             }
         }
         return null;
@@ -152,7 +153,7 @@ public class TF2Item {
         return false;
     }
 
-    public BigInteger getCraftNumber() {
+    public Long getCraftNumber() {
         for (Attribute attribute : attributes) {
             if (AttributeDef.CRAFT_NUMBER.getDefindex().equals(attribute.getDefIndex())) {
                 return attribute.getValue();

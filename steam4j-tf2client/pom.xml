@@ -6,6 +6,7 @@
     <version>2.0.19-SNAPSHOT</version>
   </parent>
   <artifactId>steam4j-tf2client</artifactId>
+  <name>Steam4j-tf2client</name>
       <licenses>
         <license>
             <name>MIT License</name>
