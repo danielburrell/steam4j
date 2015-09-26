@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!-- change log file based on current backpack -->
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>desc</key>
+            <defaultValue>unknown</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${desc}" class="ch.qos.logback.core.FileAppender">
+                <file>web-${desc}.log</file>
+                <layout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+                </layout>
+            </appender>
+        </sift>
+    </appender>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Stop BlockingQueueConsumer from being too chatty -->
+    <logger name="org.springframework.amqp.rabbit.listener.BlockingQueueConsumer" level="ERROR" additivity="false"></logger>
+    
+    <root>
+        <!-- IF log level isn't set then default to debug -->
+        
+        <level value="${logging.root.level:-INFO}" />
+           
+        <!-- if LOG_HOME isn't set, only use STDOUT -->
+        <if condition='isDefined("LOG_HOME")'>
+            <then>
+                <appender-ref ref="SIFT" />
+            </then>
+            <else>
+                <appender-ref ref="STDOUT" />
+            </else>
+        </if>
+    </root>
+</configuration>
