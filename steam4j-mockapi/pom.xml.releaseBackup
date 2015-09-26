@@ -3,32 +3,8 @@
     <parent>
         <groupId>uk.co.solong</groupId>
         <artifactId>steam4j</artifactId>
-        <version>2.0.20-SNAPSHOT</version>
+        <version>2.0.19-SNAPSHOT</version>
     </parent>
-    <artifactId>steam4j-mockapi</artifactId>
-    <name>Steam4j-mockapi</name>
-    <licenses>
-        <license>
-            <name>MIT License</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>Daniel Burrell</name>
-            <email>daniel@solong.co.uk</email>
-            <organization>So Long Software</organization>
-            <organizationUrl>http://www.solong.co.uk</organizationUrl>
-        </developer>
-    </developers>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-    
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -77,6 +53,7 @@
             <artifactId>jul-to-slf4j</artifactId>
         </dependency>
     </dependencies>
+    <artifactId>steam4j-mockapi</artifactId>
     <profiles>
         <profile>
             <id>release</id>
@@ -232,15 +209,4 @@
             </plugin>
         </plugins>
     </build>
-    <scm>
-        <url>https://github.com/danielburrell/steam4j</url>
-        <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
-        <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-    <url>www.solong.co.uk/steam4j</url>
-    <description>A client library for Steam's TF2 Backpack/Schema API.</description>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 </project>

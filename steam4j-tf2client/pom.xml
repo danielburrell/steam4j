@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>uk.co.solong</groupId>
-    <artifactId>steam4j</artifactId>
-    <version>2.0.20-SNAPSHOT</version>
-  </parent>
-  <artifactId>steam4j-tf2client</artifactId>
-  <name>Steam4j-tf2client</name>
-      <licenses>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>uk.co.solong</groupId>
+        <artifactId>steam4j</artifactId>
+        <version>2.0.20-SNAPSHOT</version>
+    </parent>
+    <artifactId>steam4j-tf2client</artifactId>
+    <name>Steam4j-tf2client</name>
+    <licenses>
         <license>
             <name>MIT License</name>
             <url>http://www.opensource.org/licenses/mit-license.php</url>
@@ -167,4 +167,15 @@
             <version>0.0.2</version>
         </dependency>
     </dependencies>
+    <scm>
+        <url>https://github.com/danielburrell/steam4j</url>
+        <connection>scm:git:git://github.com/danielburrell/steam4j.git</connection>
+        <developerConnection>scm:git:git@github.com:danielburrell/steam4j.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+    <url>www.solong.co.uk/steam4j</url>
+    <description>A client library for Steam's TF2 Backpack/Schema API.</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
