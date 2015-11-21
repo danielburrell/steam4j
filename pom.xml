@@ -178,5 +178,6 @@
     <modules>
         <module>steam4j-mockapi</module>
         <module>steam4j-tf2client</module>
+        <module>steam4j-auth</module>
     </modules>
 </project>
